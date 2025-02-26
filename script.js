@@ -31,15 +31,29 @@ async function getQuote() {
     }
 }
 
+// Tweet Quote
+function tweetQuote() {
+    const quote = quoteText.innerText;
+    const author = authorText.innerText;
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${quote} - ${author}`;
+    window.open(twitterUrl, '_blank');
+}
+
+// Share Quote to Facebook
+function shareToFacebook() {
+    const quote = quoteText.innerText;
+    const author = authorText.innerText;
+    // Uses the current page URL and adds the quote as a parameter.
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodeURIComponent(quote + " - " + author)}`;
+    window.open(facebookUrl, '_blank');
+}
 
 
+// Event Listeners
+newQuoteBtn.addEventListener('click', getQuote);
+twitterBtn.addEventListener('click', tweetQuote);
+facebookBtn.addEventListener('click', shareToFacebook);
 
-// Ensure the DOM is fully loaded before running the script
-document.addEventListener("DOMContentLoaded", () => {
-    getQuote(); // Fetch first quote on page load
 
-    // Add event listener for the button to fetch a new quote
-    newQuoteBtn.addEventListener('click', getQuote);
-});
 
 getQuote(); // Fetch first quote on page load
