@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>Quote Generator</title>
 
     <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=css-tricks.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -11,9 +11,40 @@
 
 </head>
 <body>
-    <h1>Hello world</h1>
+    <!-- the body is placed inside a flex box to align the contents -->
+    <!-- The following line can be typed as -->
+     <!-- div.quote-container#quote-container <-by the # representing the id  -->
+     <div class="quote-container" id="quote-container">
+
+        <!-- Quote -->
+         <div class="quote-text">
+            <i class="fas fa-quote-left"></i>
+            <span id="quote">what you are is what you have been. what you'll be is what you do now.</span>
+         </div>
+         
+         <!-- Author -->
+          <!-- the following line can be typed as -->
+           <!-- .quote-author -->
+         <div class="quote-author">
+            <span class="author">Buddha</span>
+         </div> 
+
+         <!-- Buttons -->
+          <div class="button-container">
+            <button class="facebook-button" id="facebook" title="Post THIS!!!">
+                <!-- the faceBook icon from the Font Awesome -->
+                <i class="fa-brands fa-facebook"></i>
+            </button>
+
+            <button id="new-quote">New Quote</button>
+          </div>
+
+    </div>
+    
     <!-- notes on codes Ctrl + ?  -->
+
      <!-- Script -->
-      <script>src="script.js"</script>
+      <script src="script.js"></script>
 </body>
 </html>
+<!-- vector background -- heropatterns.com -->
